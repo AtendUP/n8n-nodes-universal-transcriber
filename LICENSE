@@ -1,33 +1,31 @@
-# MIT License
+MIT License
 
 Copyright (c) 2025 Maicon Bartoski - AtendUP
 
-Permission is hereby granted, free of charge, to any person obtaining a copy  
-of this software and associated documentation files (the "Software"), to deal  
-in the Software without restriction, including without limitation the rights  
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell  
-copies of the Software, and to permit persons to whom the Software is  
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all  
+The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR  
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,  
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE  
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER  
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,  
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
----
+Additional Restriction:
 
-### 🔒 Restrição Adicional
+Commercializing this software directly or indirectly in the form of reselling the source code or distributing it as a closed or proprietary product is strictly prohibited.
 
-A comercialização direta ou indireta deste software, ou de qualquer parte dele, é proibida **somente na forma de revenda do código-fonte ou redistribuição como produto fechado**.
+You are allowed to use, modify, and integrate this software into your own automations or projects, including offering services based on it.
 
-Você pode usar, modificar e integrar este software em automações e projetos próprios, **inclusive prestando serviços com ele**.
+However, you are not allowed to sell this node as a standalone product, redistribute the source code for commercial purposes, or repackage it under another brand or author.
 
-No entanto, **não é permitido comercializar este node como um produto independente, vender o código-fonte ou disponibilizá-lo como solução fechada sob outra marca ou autoria.**
-
-Uso para fins pessoais, empresariais, educacionais ou de prestação de serviços é permitido.
+Use for personal, educational, business, or service-oriented purposes is permitted, as long as it is not intended for direct resale as a product.
