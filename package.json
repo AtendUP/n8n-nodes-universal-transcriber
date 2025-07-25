@@ -1,6 +1,6 @@
 {
-  "name": "n8n-nodes-atendup-universal-transcriber",
-  "version": "1.0.4",
+  "name": "n8n-nodes-universal-transcriber",
+  "version": "0.0.2",
   "description": "AtendUP Universal Transcriber node for n8n",
   "scripts": {
     "build": "tsc",
