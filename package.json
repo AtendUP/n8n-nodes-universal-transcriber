@@ -1,0 +1,52 @@
+{
+  "name": "n8n-nodes-atendup-universal-transcriber",
+  "version": "1.0.4",
+  "description": "AtendUP Universal Transcriber node for n8n",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
+  },
+  "keywords": [
+    "n8n",
+    "node",
+    "transcriber",
+    "atendup",
+    "openai",
+    "whisper",
+    "ocr"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "n8n": {
+    "nodes": [
+      "dist/nodes/UniversalTranscriber.node.js"
+    ],
+    "credentials": [
+      "dist/credentials/OpenAiApi.credentials.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.4",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.10",
+    "@types/pdf-parse": "^1.1.5",
+    "@types/tesseract.js": "^0.0.2",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-n8n-nodes-base": "^1.0.0",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "form-data": "^4.0.0",
+    "n8n-workflow": "^1.82.0",
+    "openai": "^4.52.0",
+    "pdf-parse": "^1.1.1",
+    "tesseract.js": "^5.1.1"
+  }
+}
