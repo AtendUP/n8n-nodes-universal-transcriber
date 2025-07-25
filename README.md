@@ -1,31 +1,26 @@
-# Universal Transcriber n8n Node
+![Universal Transcriber Icon](https://img.atendup.com/github/universal-transcriber.png)
 
-![Universal Transcriber Icon](https://raw.githubusercontent.com/n8n-io/n8n-nodes-base/master/nodes/UniversalTranscriber/UniversalTranscriber.node.ts/transcriber.svg)
-
-Um node n8n poderoso para transcrição universal de mídia, capaz de processar áudio, imagens, PDFs e texto puro, retornando o conteúdo transcrito em formato de texto. Ideal para automação de fluxos de trabalho que exigem extração de informações de diversas fontes.
+Um node poderoso da **AtendUP** para transcrição universal de mídia no **n8n**, capaz de processar áudio, imagens, PDFs e texto puro, retornando o conteúdo transcrito em formato de texto. Ideal para automatizar fluxos de trabalho que exigem extração de informações de diferentes fontes.
 
 ## Funcionalidades
 
-- **Detecção Automática de Tipo de Mídia**: Identifica automaticamente se a entrada é áudio, imagem, PDF, DOCX ou texto.
-- **Extração Inteligente de Conteúdo**: Capaz de extrair URLs e dados Base64 de strings de entrada complexas, tornando o node mais autônomo.
-- **Transcrição de Áudio**: Utiliza a API OpenAI Whisper para transcrever arquivos de áudio (MP3, WAV, OGG, M4A) de URLs ou Base64.
-- **Reconhecimento Óptico de Caracteres (OCR)**: Extrai texto de imagens (PNG, JPG, JPEG, GIF, BMP) usando Tesseract.js.
-- **Extração de Texto de Documentos**: Processa arquivos PDF para extrair seu conteúdo textual.
-- **Processamento de Texto Puro**: Retorna o texto de entrada diretamente.
-- **Credenciais Seguras**: Utiliza credenciais para OpenAI API, mantendo suas chaves seguras.
+- ✅ **Detecção Automática de Tipo de Mídia**: Identifica se a entrada é áudio, imagem, PDF, DOCX ou texto.
+- 🤖 **Extração Inteligente de Conteúdo**: Lê URLs ou dados Base64 mesmo de strings bagunçadas.
+- 🎙️ **Transcrição de Áudio**: Usa a OpenAI Whisper para transcrever arquivos MP3, WAV, OGG, M4A.
+- 🖼️ **OCR (Reconhecimento Óptico de Caracteres)**: Extrai texto de imagens (PNG, JPG, JPEG, GIF, BMP) com Tesseract.js.
+- 📄 **Extração de Texto de PDFs**: Lê o conteúdo de arquivos PDF.
+- ✏️ **Texto Puro**: Apenas retorna o texto da entrada.
+- 🔐 **Credenciais Seguras**: Usa a API da OpenAI com segurança.
 
 ## Instalação
 
-Para instalar este node em sua instância n8n, siga os passos abaixo:
-
-1. Navegue até o diretório de sua instalação n8n.
-2. Instale o pacote npm:
+Para instalar este node em sua instância do n8n, execute:
 
 ```bash
 npm install n8n-nodes-atendup-universal-transcriber
 ```
 
-Ou, se você estiver desenvolvendo nodes personalizados, adicione-o ao seu `package.json`:
+Ou adicione ao seu `package.json`:
 
 ```json
 "dependencies": {
@@ -33,56 +28,69 @@ Ou, se você estiver desenvolvendo nodes personalizados, adicione-o ao seu `pack
 }
 ```
 
-E então execute `npm install`.
+Depois, rode:
+
+```bash
+npm install
+```
 
 ## Credenciais
 
 Este node requer uma credencial:
 
-### 1. OpenAI API
+### 🔑 OpenAI API
 
-- **API Key**: Sua chave de API da OpenAI. Esta chave é usada para acessar os serviços de transcrição (Whisper) e OCR (se necessário, via GPT ou Tesseract).
+- **API Key**: Sua chave da OpenAI, usada para serviços como Whisper (áudio) e OCR (via GPT ou Tesseract, se necessário).
 
-## Uso
+## Como Usar
 
-1. Arraste e solte o node "Universal Transcriber" para o seu workflow n8n.
-2. Configure a credencial "OpenAI API" na seção de credenciais do node.
-3. Configure as propriedades do node:
-   - **Input Type**: Selecione o tipo de mídia (Auto Detect, Text, Audio, Image, PDF, DOCX). Recomenda-se "Auto Detect" para a maioria dos casos.
-   - **Input Source**: Forneça o conteúdo da mídia. Pode ser texto puro, uma URL para o arquivo ou dados Base64. O node tentará extrair o conteúdo relevante de strings complexas.
-   - **File Name (Optional)**: Se a "Input Source" for uma URL, forneça o nome do arquivo com a extensão para auxiliar na detecção automática do tipo de mídia (ex: `audio.mp3`, `documento.pdf`).
-   - **Language (for Audio/OCR)**: (Opcional) O idioma do conteúdo para transcrição de áudio (Whisper) ou OCR (Tesseract). Use códigos ISO 639-1 (ex: `pt`, `en`, `es`).
+1. Adicione o node **Universal Transcriber** no seu workflow do n8n.
+2. Configure a credencial **OpenAI API** no node.
+3. Preencha as propriedades:
 
-### Exemplo de Workflow
+   - **Input Type**: Tipo da mídia (Auto Detect, Text, Audio, Image, PDF, DOCX).
+   - **Input Source**: Texto direto, URL do arquivo ou dados Base64.
+   - **File Name (Optional)**: Caso use URL, ajude na identificação do tipo informando algo como `voz.mp3` ou `documento.pdf`.
+   - **Language (Optional)**: Idioma do áudio ou imagem (ex: `pt`, `en`, `es`).
 
-Um workflow simples pode:
+### Exemplo de Uso
 
-1. Receber uma string contendo uma URL de áudio ou dados Base64.
-2. Passar a string para o "Universal Transcriber" node.
-3. O node extrai o conteúdo da mídia e transcreve o áudio para texto.
-4. O texto transcrito é então usado em um node de e-mail ou armazenamento.
+Um fluxo pode:
+
+1. Receber uma string com uma URL ou Base64.
+2. Passar para o **Universal Transcriber**.
+3. Ele detecta, extrai e transcreve.
+4. O resultado pode ser enviado por e-mail, armazenado ou usado em IA.
 
 ## Desenvolvimento
 
-Para contribuir ou desenvolver este node localmente:
+Se quiser contribuir ou testar localmente:
 
-1. Clone este repositório.
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/AtendUP/n8n-nodes-universal-transcriber.git
+```
+
 2. Instale as dependências:
-   ```bash
-   npm install
-   ```
-3. Compile o TypeScript:
-   ```bash
-   npm run build
-   ```
-4. Para testar o node em sua instância n8n local, você pode usar `npm link` ou copiar os arquivos `dist` para o diretório de nodes personalizados do n8n.
+
+```bash
+npm install
+```
+
+3. Compile o projeto:
+
+```bash
+npm run build
+```
+
+4. Teste localmente com `npm link` ou copie os arquivos do `dist/` para sua pasta de nodes personalizados do n8n.
 
 ## Licença
 
-Este projeto está licenciado sob a licença MIT com restrição de comercialização. Veja o arquivo `LICENSE` para mais detalhes.
+Este projeto está sob a Licença MIT com restrição de comercialização. Veja o arquivo `LICENSE` para mais detalhes.
 
 ---
 
-**Desenvolvido por Manus AI**
-
-
+**Desenvolvido por [Maicon Bartoski](https://github.com/maiconbartoski) • AtendUP**  
+🌐 [atendup.com](https://atendup.com)
