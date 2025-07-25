@@ -1,6 +1,25 @@
 ![Universal Transcriber Icon](https://img.atendup.com/github/universal-transcriber.png)
-
 Um node poderoso da **AtendUP** para transcrição universal de mídia no **n8n**, capaz de processar áudio, imagens, PDFs e texto puro, retornando o conteúdo transcrito em formato de texto. Ideal para automatizar fluxos de trabalho que exigem extração de informações de diferentes fontes.
+
+## 🚧 Versão Beta
+
+> ⚠️ Este node está atualmente em **versão beta**. Ainda estamos ajustando e melhorando algumas funcionalidades.
+
+### Problemas conhecidos:
+- ❌ A **transcrição de arquivos em Base64 ainda não está funcionando corretamente** e pode gerar erros.
+- ✅ O uso de **URLs para mídia está funcionando normalmente** (áudio, imagens, PDF, etc).
+- 🔁 Ainda **não é possível personalizar o comportamento da IA** (como traduzir, resumir ou interpretar o conteúdo).
+
+### O que vem na próxima versão:
+Na próxima atualização, vamos adicionar suporte a **prompts personalizados**, permitindo que o usuário defina o que deseja que a IA faça com o conteúdo transcrito:
+
+- 📄 **PDF** → "Resuma para mim"
+- 🖼️ **Imagem** → "Descreva a imagem"
+- 🎧 **Áudio** → "Traduza esse áudio para português"
+
+Com isso, o node se tornará muito mais flexível e inteligente para automações no n8n.
+
+
 
 ## Funcionalidades
 
